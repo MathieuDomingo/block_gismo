@@ -1,3 +1,7 @@
+Release 3.3 (2014-10-28)
+- Fix: changed all get_context_instance calls to context_*::instance
+- Fix: updated version and to install this block moodle 2.6.x is required
+
 Created branch MOODLE_26 (2014-10-28)
 
 Release 3.2 (2013-10-15)
