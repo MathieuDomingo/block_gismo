@@ -1,5 +1,4 @@
-Created brach MOODLE_26
-
+Created branch MOODLE_26 (2014-10-28)
 
 Release 3.2 (2013-10-15)
 - New: Added books to resources list
