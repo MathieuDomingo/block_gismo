@@ -18,7 +18,7 @@
     - PHP v. 5.3 (it should work with previous versions of php if you install
       PECL JSON >=1.2.0, but we didn't test it).
     - Database (one from the list of those supported by Moodle)
-    - Moodle 2.3.x or 2.4.x or 2.5.x or 2.6.x
+    - Moodle 2.6.x
 
     WARNING: Gismo has been tested on Mysql (v. 5.5.x)
 
