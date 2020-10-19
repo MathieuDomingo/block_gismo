@@ -119,7 +119,8 @@ switch ($query) {
         $student_resource_access = false;
         $ctu_filters .= " GROUP BY course, timedate, userid"; //BUG FIX WHEN GISMO EXPORTER RUN MORE THEN ONCE A DAY, we need to group by course,timedate & USERID
         $sort = "timedate ASC";
-        $fields = " course, userid, timedate, sum(numval) as numval"; //BUG FIX WHEN GISMO EXPORTER RUN MORE THEN ONCE A DAY
+        //$fields = " course, userid, timedate, sum(numval) as numval"; //BUG FIX WHEN GISMO EXPORTER RUN MORE THEN ONCE A DAY
+        $fields = " course, userid, CAST(FROM_UNIXTIME(timedate) as date) as timedate, sum(numval) as numval"; //je ne sais pas pourquoi mais en bdd le timedate est un timestamp pas un timedate..
         //postgreSQL solve problem on GROUP BY
         if ($CFG->dbtype === "pgsql") {
             $student_resource_access = $DB->get_records_sql("SELECT ROW_NUMBER() over(), a.* FROM (SELECT $fields"
